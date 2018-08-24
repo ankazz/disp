@@ -128,11 +128,11 @@ class TaskController extends Controller
         return response()->json('User Deleted');
     }
 
-    public function searchSub($q)
+    public function searchSub(Request $request)
     {
         $subs = DB::connection('akteh')->table('vwSubstations')
         ->join('Ref_UnitTypes', 'Ref_UnitTypes.UnitType_Code', '=', 'vwSubstations.UnitType_Code')
-        ->where('ServiceObject_Name','like', '%'.$q.'%')
+        ->where('ServiceObject_Name','like', '%'.$request->get('search').'%')
         ->get();
 
         $res = [

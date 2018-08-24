@@ -73,12 +73,13 @@ export default {
             this.search(loading, search, this);
             },
             search: _.debounce((loading, search, vm) => {
-            fetch(
-                `/api/tasks/searchSub/${escape(search)}`
-            ).then(res => {
-                res.json().then(json => (vm.options = json.items));
-                loading(false);
-            });
+                axios.post('/api/tasks/searchSub', {
+                search: escape(search)
+                }).then(response => {
+                    vm.options = response.data.items;
+                    loading(false);
+                    
+                });
             }, 350)
         },
         watch: {
