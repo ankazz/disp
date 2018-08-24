@@ -18,6 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('tasks', 'Api\TaskController');
-Route::get('/tasks/searchSub/{q}', 'Api\TaskController@searchSub');
+Route::post('/tasks/searchSub', 'Api\TaskController@searchSub');
 Route::get('/tasks/getServiceObjects/{id}', 'Api\TaskController@getServiceObjects');
 Route::post('/tasks/getLegals/', 'Api\TaskController@getLegals');
