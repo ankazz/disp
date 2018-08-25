@@ -19,4 +19,5 @@ Auth::routes();
 Route::resource('tasks', 'TaskController');
 Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/home', 'HomeController@index')->name('home');   
+    Route::resource('subs', 'SubController');
 });

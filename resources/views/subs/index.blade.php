@@ -18,7 +18,7 @@
         </div>
 
         <div class="box-body">
-            <tasks></tasks>
+          Start creating your amazing application!
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

@@ -1,6 +1,7 @@
 <template>
-<div class="col-sm-10">
+<div>
     <div class="form-group">
+        <label for="name">ТП:</label>
         <v-select label="name" :filterable="false" :options="options" @search="onSearch" v-model="selected">
             <div slot="no-options">
             type to search GitHub repositories..
@@ -17,20 +18,20 @@
             </div>
         </v-select> 
     </div>
-    <div class="form-group" v-if="selected">    
+    <div class="box-body" v-if="selected">    
         <div class="row">
-            <div class="col">
+            <div class="col-sm-offset-1 col-xs-5 checkbox">
                 <label>1 секция</label>
                 <div v-for="cell in cells" :key="cell.Conductor_ID" v-if="cell.Cell == 'Секция 1'" class="form-check" id="section1">
                     <input class="form-check-input" type="checkbox" v-bind:id="cell.Conductor_ID" v-bind:value="cell.Conductor_ID" v-model="selectedCells">
                     <label class="form-check-label" for="defaultCheck1">{{cell.ServiceObject_Name}}</label>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-xs-6 checkbox">
                 <label for="inputCity">2 секция</label>
                 <div v-for="cell in cells" :key="cell.Conductor_ID" v-if="cell.Cell == 'Секция 2'" class="form-check">
-                <input class="form-check-input" type="checkbox" v-bind:id="cell.Conductor_ID" v-bind:value="cell.Conductor_ID" v-model="selectedCells">
-                <label class="form-check-label" for="defaultCheck1">{{cell.ServiceObject_Name}}</label>
+                    <input class="form-check-input" type="checkbox" v-bind:id="cell.Conductor_ID" v-bind:value="cell.Conductor_ID" v-model="selectedCells">
+                    <label class="form-check-label" for="defaultCheck1">{{cell.ServiceObject_Name}}</label>
                 </div>
             </div>
         </div>

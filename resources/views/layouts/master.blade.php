@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | Starter</title>
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <!-- Styles -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -214,7 +217,8 @@
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li><a href="/tasks"><i class="fa fa-link"></i> <span>Tasks</span></a></li>
+        <li><a href="/subs"><i class="fa fa-link"></i> <span>Subs</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -247,11 +251,9 @@
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content container-fluid" id="app">
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+      @yield('content')
 
     </section>
     <!-- /.content -->

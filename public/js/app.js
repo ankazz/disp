@@ -47692,12 +47692,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -47737,21 +47731,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "my-3 p-3 bg-white rounded box-shadow" }, [
-    _c(
-      "form",
-      {
-        staticClass: "form-horizontal",
-        attrs: { action: "/tasks", methods: "post" }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c(
-            "label",
-            { staticClass: "control-label col-sm-2", attrs: { for: "name" } },
-            [_vm._v("Name:")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-10" }, [
+    _c("form", { attrs: { role: "form", action: "/tasks", methods: "post" } }, [
+      _c(
+        "div",
+        { staticClass: "box-body" },
+        [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "description" } }, [_vm._v("Name:")]),
+            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -47763,7 +47750,6 @@ var render = function() {
               ],
               staticClass: "form-control",
               attrs: {
-                type: "text",
                 id: "description",
                 placeholder: "Enter Name",
                 name: "description"
@@ -47777,50 +47763,30 @@ var render = function() {
                   _vm.description = $event.target.value
                 }
               }
-            }),
-            _vm._v(" "),
-            _vm.errors.description
-              ? _c("span", { staticClass: "error" }, [
-                  _vm._v(_vm._s(_vm.errors.description[0]))
-                ])
-              : _vm._e()
-          ])
-        ]),
-        _vm._v(" "),
+            })
+          ]),
+          _vm._v(" "),
+          _c("select-subs")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "box-footer" }, [
         _c(
-          "div",
-          { staticClass: "form-group" },
-          [
-            _c(
-              "label",
-              { staticClass: "control-label col-sm-2", attrs: { for: "name" } },
-              [_vm._v("ТП:")]
-            ),
-            _vm._v(" "),
-            _c("select-subs")
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    _vm.addNewTask()
-                  }
-                }
-              },
-              [_vm._v("Save")]
-            )
-          ])
-        ])
-      ]
-    )
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                _vm.addNewTask()
+              }
+            }
+          },
+          [_vm._v("Save")]
+        )
+      ])
+    ])
   ])
 }
 var staticRenderFns = []
@@ -47919,7 +47885,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47930,11 +47896,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
 //
 //
 //
@@ -48011,21 +47972,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "form",
-      {
-        staticClass: "form-horizontal",
-        attrs: { action: "/tasks", methods: "post" }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c(
-            "label",
-            { staticClass: "control-label col-sm-2", attrs: { for: "name" } },
-            [_vm._v("Name:")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-10" }, [
+    _c("form", { attrs: { role: "form", action: "/tasks", methods: "post" } }, [
+      _c(
+        "div",
+        { staticClass: "box-body" },
+        [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "description" } }, [_vm._v("Name:")]),
+            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -48037,7 +47991,6 @@ var render = function() {
               ],
               staticClass: "form-control",
               attrs: {
-                type: "text",
                 id: "description",
                 placeholder: "Enter Name",
                 name: "description"
@@ -48058,43 +48011,29 @@ var render = function() {
                   _vm._v(_vm._s(_vm.errors.description[0]))
                 ])
               : _vm._e()
-          ])
-        ]),
-        _vm._v(" "),
+          ]),
+          _vm._v(" "),
+          _c("select-subs")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "box-footer" }, [
         _c(
-          "div",
-          { staticClass: "form-group" },
-          [
-            _c(
-              "label",
-              { staticClass: "control-label col-sm-2", attrs: { for: "name" } },
-              [_vm._v("ТП:")]
-            ),
-            _vm._v(" "),
-            _c("select-subs")
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    _vm.UpdateTask()
-                  }
-                }
-              },
-              [_vm._v("Update")]
-            )
-          ])
-        ])
-      ]
-    )
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                _vm.UpdateTask()
+              }
+            }
+          },
+          [_vm._v("Update")]
+        )
+      ])
+    ])
   ])
 }
 var staticRenderFns = []
@@ -48312,11 +48251,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-sm-10" }, [
+  return _c("div", [
     _c(
       "div",
       { staticClass: "form-group" },
       [
+        _c("label", { attrs: { for: "name" } }, [_vm._v("ТП:")]),
+        _vm._v(" "),
         _c(
           "v-select",
           {
@@ -48373,11 +48314,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _vm.selected
-      ? _c("div", { staticClass: "form-group" }, [
+      ? _c("div", { staticClass: "box-body" }, [
           _c("div", { staticClass: "row" }, [
             _c(
               "div",
-              { staticClass: "col" },
+              { staticClass: "col-sm-offset-1 col-xs-5 checkbox" },
               [
                 _c("label", [_vm._v("1 секция")]),
                 _vm._v(" "),
@@ -48451,7 +48392,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col" },
+              { staticClass: "col-xs-6 checkbox" },
               [
                 _c("label", { attrs: { for: "inputCity" } }, [
                   _vm._v("2 секция")

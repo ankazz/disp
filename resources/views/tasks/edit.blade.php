@@ -1,26 +1,54 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="my-3 p-3 bg-white rounded box-shadow">
-    <h4>Edit Task</h4>
+<section class="content">
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Юр лицо</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-    </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <task-edit id="{!! $id !!}"></task-edit> 
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Title</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+          
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><list-legal></list-legal></div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+
+        <div class="box-body">
+
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Форма</a></li>
+              <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Юр лицо</a></li>
+              <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Tab 3</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_1">
+                <task-edit id="{!! $id !!}"></task-edit> 
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_2">
+                <list-legal></list-legal>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_3">
+                ...
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+        </div>
+
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+          Footer
+        </div>
+        <!-- /.box-footer-->
     </div>
-</div>
+    <!-- /.box -->
+</section>
 @endsection
