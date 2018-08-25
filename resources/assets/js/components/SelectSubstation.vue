@@ -33,7 +33,6 @@
                 <label class="form-check-label" for="defaultCheck1">{{cell.ServiceObject_Name}}</label>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
